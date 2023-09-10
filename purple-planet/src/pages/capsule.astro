@@ -1,0 +1,13 @@
+---
+const pageName= "Capsule"
+const response= await fetch('https://api.spacexdata.com/v3/capsules')
+const data =await response.json();
+console.log(data)
+---
+
+<h1>This is from {pageName} page</h1>
+ {
+    data.map((cap) => (
+     <p>{cap.capsule_serial}</p>
+    ))
+  }

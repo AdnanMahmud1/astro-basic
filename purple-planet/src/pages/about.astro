@@ -1,0 +1,17 @@
+---
+
+import Capsule from "../components/Capsule"
+import BaseLayout from "../layouts/BaseLayout.astro";
+const  pageTitle  = "Main home page";
+
+const response= await fetch('https://api.spacexdata.com/v3/capsules')
+const data =await response.json();
+---
+
+<BaseLayout pageTitle={pageTitle}>
+<h2>Space X launch Log:</h2>
+{
+    data === 'undefined'? <p>Loading..</p>:<Capsule  capsuleData={data}/>
+}
+
+</BaseLayout>
