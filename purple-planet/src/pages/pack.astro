@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const  pageTitle  = "Axios test ";
+import AxiosTest from "../components/AxiosTest";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+<AxiosTest client:load/>
+</BaseLayout>

@@ -1,9 +1,9 @@
-import Table from "react-bootstrap/Table";
+
 
 const Capsule = ({ capsuleData }) => {
   return (
     <>
-      <Table striped bordered hover>
+      <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -25,7 +25,7 @@ const Capsule = ({ capsuleData }) => {
               );
             })}
         </tbody>
-      </Table>
+      </table>
     </>
   );
 };
